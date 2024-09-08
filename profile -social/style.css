@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #141414;
+  --bg-secondary: #1F1F1F;
+  --bg-tertiary: #333;
+
+  --content-primary: #FFFFFF;
+  --content-accent: #C4F82A;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100svh;
+  background-color: var(--bg-primary);
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  color: var(--content-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+
+  width: 100%;
+  max-width: 384px;
+  
+  background-color: var(--bg-secondary);
+  margin: 24px;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+img {
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+}
+
+.profile-info p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--content-accent);
+}
+
+.profile-about {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  row-gap: 16px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--content-primary);
+  background-color: var(--bg-tertiary);
+  
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+button:hover {
+  color: var(--bg-secondary);
+  background-color: var(--content-accent);
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 24px;
+  }
+}
